@@ -1,5 +1,6 @@
 package org.yearup.data;
 
+import org.springframework.context.annotation.Primary;
 import org.yearup.models.User;
 
 import java.util.List;
