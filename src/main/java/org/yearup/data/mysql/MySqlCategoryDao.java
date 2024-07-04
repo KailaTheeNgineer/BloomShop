@@ -33,7 +33,7 @@ public class MySqlCategoryDao extends MySqlDaoBase implements CategoryDao {
                 categories.add(category);
             }
         } catch (SQLException e) {
-            System.out.println(e);
+           e.printStackTrace();
         }
 
         return categories;
@@ -55,7 +55,7 @@ public class MySqlCategoryDao extends MySqlDaoBase implements CategoryDao {
                 return mapRow(row);
             }
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
         return null;
     }
@@ -90,7 +90,7 @@ public class MySqlCategoryDao extends MySqlDaoBase implements CategoryDao {
         }
         catch (SQLException e)
         {
-            throw new RuntimeException(e);
+           e.printStackTrace();
         }
         return null;
     }
@@ -112,7 +112,7 @@ public class MySqlCategoryDao extends MySqlDaoBase implements CategoryDao {
 
             statement.executeUpdate();
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
     }
 
@@ -132,7 +132,7 @@ public class MySqlCategoryDao extends MySqlDaoBase implements CategoryDao {
         }
         catch (SQLException e)
         {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
     }
 
